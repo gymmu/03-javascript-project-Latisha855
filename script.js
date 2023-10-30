@@ -23,13 +23,22 @@ else { // Das aktuelle Zeichen ist weder ein 'e' noch ein 'E', hänge also das a
 export function aufgabe02(args) {
   const input = args
   const result = []
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
     // Wandle das aktuelle Element in einen Grossbuchstaben um
-    const capitalizedElement = currentElement.toUpperCase ()
+    const capitalizedElement = currentElement.toUpperCase()
 
     // Hänge das Grossbuchstaben an das Resultat an...
-    resultat.push (capitalizedElement)
+    result.push(capitalizedElement)
   }
+  return result.join("")
+}
+
+export function aufgabe03(args) {
+  const input = args
+  const result = []
+  
   return result.join("")
 }
