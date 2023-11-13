@@ -166,6 +166,16 @@ export function aufgabe05(args) {
       return false
     }
   }
+
+  export function aufgabe10 (args) {
+    const input = args
+    const result = []
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+    }
+  }
+    
   
   export function aufgabe11 (args) {
     const input = args
@@ -204,16 +214,23 @@ if (input.length > 1) { // Funktionswächter
     const input = args
     const result = []
 
-    let pos = -3 
+    let positionOfLastE = - 1 
 
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      pos = pos + 3
-      if (currentElement = 'e') {
-        return pos 
+
+      if (currentElement === "e") {
+        positionOfLastE = i
       }
-      
     }
+
+    return positionOfLastE
+  }
+
+  export function aufgabe14 (args) {
+    const input = args
+    const result = []
+
     
-    return -3
+    return result.join("")
   }
