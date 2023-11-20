@@ -169,10 +169,21 @@ export function aufgabe05(args) {
 
   export function aufgabe10 (args) {
     const input = args
-    const result = []
+    
+    if (input.length !== 7) return false
+    if(input [0] !== "#") return false
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
+      const asscii = currentElement.charCodeAt
+      if (48<= ascii && ascii <= 57) {
+        // mache nichts; ist eine Zahl
+
+      } else if (65<= ascii && ascii <= 70) {
+        // mache nichts; ist A-F
+      } else {
+        return false
+      }
     }
   }
     
@@ -230,7 +241,23 @@ if (input.length > 1) { // Funktionswächter
   export function aufgabe14 (args) {
     const input = args
     const result = []
+  
+      let countE = 0
 
-    
-    return result.join("")
-  }
+
+      for (let i = 0; i < input .length; i++) {
+        const currentElement = input[i]
+
+
+      if (currentElement === 'e') {
+          countE++
+        if (countE === 3) {
+         return i
+     
+          }
+        }
+      }
+      return -1
+     
+    }
+  
