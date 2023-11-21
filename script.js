@@ -290,4 +290,12 @@ if (input.length > 1) { // Funktionswächter
       return -1
      
     }
+
+
+    export function aufgabe15 (args) {
+      const input = args
+      const result = []
+      
+      return result.join("")
+    }
   
