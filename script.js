@@ -106,32 +106,59 @@ export function aufgabe05(args) {
    
   }
 
-  export function aufgabe06 (args) {
-    const input = args
-    const result = []
 
-    for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-  
-      // Wandle das aktuelle Element in einen Grossbuchstaben um
-      const capitalizedElement = currentElement.toUpperCase()
-  
-      // Hänge das Grossbuchstaben an das Resultat an...
-      result.push(capitalizedElement)
-      if(currentElement==="" ) {}
-    }
-    return result.join("")
-  }
+
+      export function aufgabe06 (args) {
+        const input = args
+        
+        
+        for (let i = 1; i < input.length; i++) {
+          const currentElement = input[i]
+          const ascii = currentElement.charCodeAt(0)
+          if (48<= ascii && ascii <= 57) {
+            // mache nichts; ist eine Zahl
+    
+          } else if (65<= ascii && ascii <= 90) {
+            // mache nichts; ist A-Z
+
+          }else if (97<= ascii && ascii <= 122) {
+            // mache nichts; ist a-z
+
+          }else if (currentElement=== " ") {
+
+          
+
+
+          } else {
+            return true
+          }
+        }
+        return false
+      }
+    
   
    
 
   export function aufgabe07 (args) {
     const input = args
     const result = []
-  
-    
-    return result.join("")
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+
+      if(currentElement === "u") {
+        if (input[i+1]=== "n") {
+          if (input[i+2]=== "d") {
+            return true 
+          }
+        }
+      }
+    }
+    return false
   }
+
+
+
 
   export function aufgabe08 (args) {
     const input = args
@@ -151,6 +178,8 @@ export function aufgabe05(args) {
     
     return result.join("")
   }
+
+
 
 
   export function aufgabe09 (args) {
@@ -173,9 +202,9 @@ export function aufgabe05(args) {
     if (input.length !== 7) return false
     if(input [0] !== "#") return false
     
-    for (let i = 0; i < input.length; i++) {
+    for (let i = 1; i < input.length; i++) {
       const currentElement = input[i]
-      const asscii = currentElement.charCodeAt
+      const ascii = currentElement.charCodeAt(0)
       if (48<= ascii && ascii <= 57) {
         // mache nichts; ist eine Zahl
 
@@ -185,6 +214,7 @@ export function aufgabe05(args) {
         return false
       }
     }
+    return true
   }
     
   
