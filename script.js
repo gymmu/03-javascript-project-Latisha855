@@ -278,7 +278,7 @@ if (input.length > 1) { // Funktionswächter
       for (let i = 0; i < input .length; i++) {
         const currentElement = input[i]
 
-
+// Finde heraus in welcher Position das dritte "e" ist
       if (currentElement === 'e') {
           countE++
         if (countE === 3) {
@@ -291,11 +291,86 @@ if (input.length > 1) { // Funktionswächter
      
     }
 
-
-    export function aufgabe15 (args) {
+    export function aufgabe15(args) {
       const input = args
       const result = []
+    
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+    
+    // Erkenne das Leerzeichen   
+    if (currentElement=== ' ' ) {
+    return result.join("")
+      
+    }
+    // Falls kein Leerzeichen vorhanden ist; keine Unterbrechungen 
+        result.push(currentElement)
+    
+    }
+      return result.join("")
+      
+    }
+  
+    export function aufgabe16 (args) {
+      const input = args
+      const result = []
+
       
       return result.join("")
     }
-  
+
+    export function aufgabe17 (args) {
+      const input = args
+      const list = []
+      
+      
+    }
+
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+      }
+        
+      
+      export function aufgabe18 (args) {
+        const input = args
+        const result = []
+        
+        for (let i = 0; i < input.length; i++) {
+          const currentElement = input[i]
+          
+          
+        }
+        return result.join("")
+      }
+
+      export function bubbleSort (args) {
+
+        const text = args
+        const list = text.split("") // Mit diesem Code wandle ich den Text um, somit kann das Element vertauscht werden 
+                                       
+                                  
+
+        for (let i = 0; i < list.length - 1; i++) {
+          const currentElement = list[i]
+          const nextElement = list[i + 1]
+          if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+
+
+            // Elemente müssen vertauscht werden, da die Reihenfolge nicht korrekt ist.
+            const tmp = list[i + 1]
+
+            list[i + 1] = list[i]
+
+            list[i] = tmp
+            i = -1 // von vorne anfangen.
+          }
+        }
+
+        const result = list.join("")
+        console.log(result)
+
+        return result 
+
+      }
+      
+    
