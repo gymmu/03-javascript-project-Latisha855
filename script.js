@@ -32,6 +32,7 @@ export function aufgabe02(args) {
     const capitalizedElement = currentElement.toUpperCase()
 
     // Der Grossbuchtaben wird an das Resultat angehängt.
+    result.push (capitalizedElement)
   }
   return result.join("")
 }
@@ -327,32 +328,38 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
     }
 
 
+   export function aufgabe17 (args) {
+    const input = args
+    const result = []
+    
+    return result.join("")
+   }
+      
 
-    export function aufgabe17 (args) {
-      const input = args
-      const list = []
       
-      
+   export function aufgabe19(args) {
+    const input = args
+    const result = []
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      // Die Zeichen werden verdoppelt.
+      result.push(currentElement)
+      result.push(currentElement)
     }
+    return result.join("")
+  }
 
-      for (let i = 0; i < input.length; i++) {
-        const currentElement = input[i]
+  export function aufgabe20 (args) {
+    const input = args
+    const result = []
 
-      }
-        
-
-      
-      export function aufgabe18 (args) {
-        const input = args
-        const result = []
-        
-        for (let i = 0; i < input.length; i++) {
-          const currentElement = input[i]
-          
-          
-        }
-        return result.join("")
-      }
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+    }
+  }
+   
+ 
 
 
 
