@@ -5,14 +5,14 @@ export function aufgabe01(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    // Wenn das aktuelle Zeichen ein 'e' ist, hänge nichts an die Liste an
+    // Wenn das aktuelle Zeichen ein 'e' ist, wird nichts angehängt.
 if (currentElement=== 'e' ) {
   result.push ("")
-  // Wenn das aktuelle Zeichen ein 'E' ist, hänge nichts an die Liste an
+  // Wenn das aktuelle Zeichen ein 'E' ist, wird nichts an die Liste angehängt.
 } else if (currentElement === 'E') {
   result.push("")
 }
-else { // Das aktuelle Zeichen ist weder ein 'e' noch ein 'E', hänge also das aktuelle Zeichen
+else { // Das aktuelle Zeichen ist weder ein 'e' noch ein 'E', daher wird das aktuelle Zeichen angehängt.
     result.push(currentElement)
   }
 }
@@ -28,11 +28,10 @@ export function aufgabe02(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    // Wandle das aktuelle Element in einen Grossbuchstaben um
+    // Das aktuelle Element in einen Grossbuchstaben umwandeln.
     const capitalizedElement = currentElement.toUpperCase()
 
-    // Hänge das Grossbuchstaben an das Resultat an...
-    result.push(capitalizedElement)
+    // Der Grossbuchtaben wird an das Resultat angehängt.
   }
   return result.join("")
 }
@@ -46,7 +45,7 @@ export function aufgabe03(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
-  // Können Sie überprüfen,ob ein 'e' enthalten ist
+  // Mit dem Code wird überprüft, ob ein "e" enthalten ist.
 
   if (currentElement=== 'e' ) {
    count = count + 1 
@@ -69,7 +68,7 @@ export function aufgabe04 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-  // Können Sie 4 Wörter zählen
+  // Soll 4 Wörter zählen
 
 
 
@@ -146,6 +145,7 @@ export function aufgabe05(args) {
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
 
+    // Wird getestet, ob das Wort "und" im Text enthalten ist.
       if(currentElement === "u") {
         if (input[i+1]=== "n") {
           if (input[i+2]=== "d") {
@@ -154,7 +154,7 @@ export function aufgabe05(args) {
         }
       }
     }
-    return false
+    return false // Wenn kein "und" im Text enthalten ist, ist die Aussage falsch und es wird abgebrochen.
   }
 
 
@@ -162,18 +162,20 @@ export function aufgabe05(args) {
 
   export function aufgabe08 (args) {
     const input = args
-    const result = []
+    const result = [] // Dies heisst, dass die Liste leer noch ist.
 
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
+      // Alle e's werden umgetauscht zu einer 3.
       if (currentElement=== "e") {
         result.push (3)
 
+        // Die Zeichen, die keine e's sind, werden einfach normal aufgeschrieben in der Liste.
       }
       else {
         result.push (currentElement)
     }
-      
+      // Mit dem return result.join ("") werden die einzelnen Teile zusammengehängt. Zu einem Text oder Wort.
     }
     
     return result.join("")
@@ -184,27 +186,28 @@ export function aufgabe05(args) {
 
   export function aufgabe09 (args) {
     const input = args
-    let len = 0
+    let len = 0 // Bedeutet das, es von vorne anfängt mit dem zählen.
     for (let i = 0; i < input.length; i++) {
       len++
     }
-
+    // Dieser Code soll prüfen, ob es exakt sechs Zeichen lang ist.
     if (len === 6) {
       return true
     } else {
-      return false
+      return false // Wenn nicht wird es abgebrochen und daher zählt es als falsch.
     }
   }
 
   export function aufgabe10 (args) {
     const input = args
-    
+    // Soll schauen, ob die gewisse Eingabe ein korrekter RGB Hexcode ist.
     if (input.length !== 7) return false
     if(input [0] !== "#") return false
     
     for (let i = 1; i < input.length; i++) {
       const currentElement = input[i]
       const ascii = currentElement.charCodeAt(0)
+
       if (48<= ascii && ascii <= 57) {
         // mache nichts; ist eine Zahl
 
@@ -222,12 +225,13 @@ export function aufgabe05(args) {
     const input = args
     const result = []
     let ascii = -1
-if (input.length > 1) { // Funktionswächter
+if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben hat, dann wird somit, durch das return null angegeben, dass es sich nicht um ein ascii code handelt.)
   return null 
 }
 
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
+      // Es soll den ascii code eines einzelnen Buchstabens geben.
       ascii = currentElement.charCodeAt(0)
       return ascii
     }
@@ -235,18 +239,21 @@ if (input.length > 1) { // Funktionswächter
     return null
   }
 
+
   export function aufgabe12 (args) {
     const input = args
     const result = []
 
-    let pos= -1
+    let pos= 0
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      pos = pos + 1
+      //Die Position des erstes e's wird damit gesucht/gefunden.
+     
       if(currentElement === 'e') {
         return pos
     }
+    pos = pos + 1 // pos bedeutet Position.Damit meint man das man jede Position prüft.
   }
     return -1 
   }
@@ -259,9 +266,9 @@ if (input.length > 1) { // Funktionswächter
 
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-
+     // Soll das letzte e erkennen.
       if (currentElement === "e") {
-        positionOfLastE = i
+        positionOfLastE = i // Bedeutet letzte Position 
       }
     }
 
@@ -272,7 +279,7 @@ if (input.length > 1) { // Funktionswächter
     const input = args
     const result = []
   
-      let countE = 0
+      let countE = 0 // Damit ist gemeint, dass es von vorne also von Anfang anfangen soll zu zählen.
 
 
       for (let i = 0; i < input .length; i++) {
@@ -282,12 +289,12 @@ if (input.length > 1) { // Funktionswächter
       if (currentElement === 'e') {
           countE++
         if (countE === 3) {
-         return i
+         return i // gibt die letzte Position an, wo sich das letzte e befand.
      
           }
         }
       }
-      return -1
+      return -1 // Da man kein drittes e gefunden hat, schreibt man return -1.
      
     }
 
@@ -319,6 +326,8 @@ if (input.length > 1) { // Funktionswächter
       return result.join("")
     }
 
+
+
     export function aufgabe17 (args) {
       const input = args
       const list = []
@@ -328,8 +337,10 @@ if (input.length > 1) { // Funktionswächter
 
       for (let i = 0; i < input.length; i++) {
         const currentElement = input[i]
+
       }
         
+
       
       export function aufgabe18 (args) {
         const input = args
@@ -343,6 +354,8 @@ if (input.length > 1) { // Funktionswächter
         return result.join("")
       }
 
+
+
       export function bubbleSort (args) {
 
         const text = args
@@ -354,9 +367,9 @@ if (input.length > 1) { // Funktionswächter
           const currentElement = list[i]
           const nextElement = list[i + 1]
           if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+          // Elemente müssen vertauscht werden, da die Reihenfolge nicht korrekt ist.
 
 
-            // Elemente müssen vertauscht werden, da die Reihenfolge nicht korrekt ist.
             const tmp = list[i + 1]
 
             list[i + 1] = list[i]
