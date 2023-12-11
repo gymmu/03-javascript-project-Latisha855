@@ -379,6 +379,27 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
   }
  
 
+  export function aufgabe26 (args) {
+  const list = args.split("") 
+// Mit dem Code wird der text in einer Liste umgeformt, um somit die Elemente zu wechseln.
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i+1]
+
+
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      //Die Elemente sollte durch den Code vertauscht werden.
+    const tmp = list[i+1]
+    list[i+1] = list[i]
+    list[i] = tmp
+
+    i = 0 //Soll dadurch nochmals vom Anfang aus starten.
+     }
+    }
+   
+    const result = list.join("")
+    return (result)
+  }
 
 
       export function bubbleSort (args) {
