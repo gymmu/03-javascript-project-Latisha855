@@ -328,13 +328,21 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
     }
 
 
-   export function aufgabe17 (args) {
-    const input = args
-    const result = []
-    
-    return result.join("")
-   }
-      
+    export function aufgabe17(args) {
+      const input = args
+      const result = input.split(',')
+     // Die Einträge werden von einem "," getrennt. Innerhalb der Liste.
+      for (let i = 0; i < result.length - 1; i++) {
+        for (let j = 0; j < result.length - 1 - i;j++){
+          if (result[j] > result[j + 1]) {
+     
+            [result[j], result[j + 1]] = [result[j + 1], result[j]]
+          }
+        }
+       
+      }
+      return result.join(',')
+    }
 
       
    export function aufgabe19(args) {
@@ -353,12 +361,22 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
   export function aufgabe20 (args) {
     const input = args
     const result = []
-
-    for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-    }
-  }
    
+   
+    for(let i =0; i < input.length; i++) {
+      const currentElement = input[i]
+   
+      // Es soll prüfen, ob nach jedem "." ein Leerschlag auftritt.
+      if (currentElement === ".") {
+        if (input[i+1] === " ")  {
+          return true
+        }
+   
+      }
+   
+  }
+    return false
+  }
  
 
 
