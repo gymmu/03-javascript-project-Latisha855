@@ -377,8 +377,40 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
   }
     return false
   }
- 
+ export function aufgabe21 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+ }
 
+ export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+ }
+
+ export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+ }
+
+ export function aufgabe24 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+ }
+
+ export function aufgabe25 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+ }
   export function aufgabe26 (args) {
   const list = args.split("") 
 // Mit dem Code wird der text in einer Liste umgeformt, um somit die Elemente zu wechseln.
@@ -400,7 +432,12 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
     const result = list.join("")
     return (result)
   }
-
+export function aufgabe28 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
 
       export function bubbleSort (args) {
 
