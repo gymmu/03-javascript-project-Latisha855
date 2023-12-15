@@ -432,6 +432,26 @@ if (input.length > 1) { // Funktionswächter (Wenn es mehr als nur 1 Bustaben ha
     const result = list.join("")
     return (result)
   }
+
+  export function aufgabe27(args) {
+    const input = args
+    if (input.length === 0) return false
+   
+   // Es soll überprüfen, ob eine Zahl eingegeben worden ist.
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt (0)
+      if(48 <= ascii && ascii <= 57) {
+        // tu nichts; es ist eine Zahl
+      } else {
+        return false
+      }
+   
+    }
+    return true
+  }
+    
+  
 export function aufgabe28 (args) {
   const input = args
   const result = []
